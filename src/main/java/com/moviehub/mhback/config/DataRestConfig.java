@@ -1,5 +1,6 @@
 package com.moviehub.mhback.config;
 
+import com.moviehub.mhback.entities.Trend;
 import com.moviehub.mhback.entities.User;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -11,5 +12,6 @@ public class DataRestConfig implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         config.exposeIdsFor(User.class);
+        config.exposeIdsFor(Trend.class);
     }
 }
