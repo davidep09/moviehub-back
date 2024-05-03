@@ -3,12 +3,13 @@ package com.moviehub.mhback.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "TRENDS")
-public class Trend {
+@Table(name = "TOTAL_LIKES")
+public class TotalLikes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long likes;
+
+    private int likes;
     private String type;
 
     public long getId() {
@@ -19,11 +20,11 @@ public class Trend {
         this.id = id;
     }
 
-    public long getLikes() {
+    public int getLikes() {
         return likes;
     }
 
-    public void setLikes(long likes) {
+    public void setLikes(int likes) {
         this.likes = likes;
     }
 
