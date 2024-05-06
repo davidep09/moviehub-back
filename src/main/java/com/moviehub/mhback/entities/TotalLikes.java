@@ -8,7 +8,6 @@ public class TotalLikes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private int likes;
     private String type;
 
