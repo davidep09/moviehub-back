@@ -3,9 +3,7 @@ package com.moviehub.mhback.controllers;
 import com.moviehub.mhback.entities.ItemList;
 import com.moviehub.mhback.repositories.ItemListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")

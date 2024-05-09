@@ -21,4 +21,14 @@ public class ListController {
     public java.util.List<com.moviehub.mhback.entities.List> getListsByUserId(@PathVariable String userId) {
         return listRepository.findListsByUserId(userId);
     }
+
+    @PostMapping
+    public com.moviehub.mhback.entities.List createList(@RequestBody com.moviehub.mhback.entities.List newList) {
+        return listRepository.save(newList);
+    }
+
+    @DeleteMapping("/{listId}")
+    public void deleteList(@PathVariable long listId) {
+        listRepository.deleteById(listId);
+    }
 }
