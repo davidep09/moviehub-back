@@ -1,22 +1,15 @@
-# Usar una imagen base de Maven con JDK 11 para construir la aplicación
-FROM maven:3.8.1-openjdk-11-slim AS build
+FROM ubuntu:latest AS build
 
-# Copiar el pom.xml y descargar las dependencias para aprovechar la capa de caché de Docker
-COPY pom.xml /usr/src/app/
-RUN mvn -f /usr/src/app/pom.xml dependency:go-offline
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
+COPY . .
 
-# Copiar el código fuente y construir la aplicación
-COPY src /usr/src/app/src
-RUN mvn -f /usr/src/app/pom.xml clean package
+RUN ./gradlew bootJar --no-daemon
 
-# Usar una imagen base de OpenJDK 11 para ejecutar la aplicación
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jdk-slim
 
-# Copiar el JAR construido en la etapa de construcción
-COPY --from=build /usr/src/app/target/*.jar /usr/app/app.jar
-
-# Exponer el puerto 8080 para que la aplicación sea accesible
 EXPOSE 8080
 
-# Ejecutar la aplicación
-ENTRYPOINT ["java","-jar","/usr/app/app.jar"]
+COPY --from=build /build/libs/demo-1.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
