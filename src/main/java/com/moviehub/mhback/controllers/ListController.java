@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "https://moviehub.es")
+@CrossOrigin(origins = "*")
 @RequestMapping("/lists")
 public class ListController {
 

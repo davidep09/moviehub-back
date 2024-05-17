@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://moviehub.es")
+@CrossOrigin(origins = "*")
 @RequestMapping("/totalLikes")
 public class TotalLikesController {
     @Autowired
