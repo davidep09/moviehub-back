@@ -5,11 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://moviehub.es")
 @RequestMapping("/likes")
 public class LikeController {
     @Autowired
     private LikeRepository likeRepository;
+
+    @GetMapping("most-liked")
+    public java.util.List<com.moviehub.mhback.entities.Like> getMostLiked() {
+        return likeRepository.findMostLiked();
+    }
 
     @GetMapping("/{userId}")
     public java.util.List<com.moviehub.mhback.entities.Like> getLikesByUserId(@PathVariable String userId) {
