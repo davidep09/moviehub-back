@@ -21,6 +21,11 @@ public class LikeController {
         return likeRepository.findLikesByMovieId(movieId);
     }
 
+    @GetMapping("/movie/{movieId}/{userId}")
+    public com.moviehub.mhback.entities.Like getLikeByMovieIdAndUserId(@PathVariable long movieId, @PathVariable String userId) {
+        return likeRepository.findLikeByMovieIdAndUserId(movieId, userId);
+    }
+
     @PostMapping
     public com.moviehub.mhback.entities.Like addLike(@RequestBody com.moviehub.mhback.entities.Like like) {
         return likeRepository.save(like);

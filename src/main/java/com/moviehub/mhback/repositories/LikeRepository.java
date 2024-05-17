@@ -12,4 +12,7 @@ public interface LikeRepository extends JpaRepository<Like, Long> {
 
     @Query("SELECT l FROM Like l WHERE l.movieId = ?1")
     List<Like> findLikesByMovieId(long movieId);
+
+    @Query("SELECT l FROM Like l WHERE l.movieId = ?1 AND l.userId = ?2")
+    Like findLikeByMovieIdAndUserId(long movieId, String userId);
 }
