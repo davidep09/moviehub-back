@@ -1,0 +1,17 @@
+com/moviehub/mhback/config/DataRestConfig.class
+com/moviehub/mhback/repositories/CommentRepository.class
+com/moviehub/mhback/controllers/CommentController.class
+com/moviehub/mhback/entities/TotalLikes.class
+com/moviehub/mhback/repositories/ListRepository.class
+com/moviehub/mhback/repositories/LikeRepository.class
+com/moviehub/mhback/entities/List.class
+com/moviehub/mhback/repositories/ItemListRepository.class
+com/moviehub/mhback/repositories/TotalLikesRepository.class
+com/moviehub/mhback/entities/Comment.class
+com/moviehub/mhback/controllers/LikeController.class
+com/moviehub/mhback/controllers/ListController.class
+com/moviehub/mhback/controllers/ItemListController.class
+com/moviehub/mhback/controllers/TotalLikesController.class
+com/moviehub/mhback/MhBackApplication.class
+com/moviehub/mhback/entities/ItemList.class
+com/moviehub/mhback/entities/Like.class
