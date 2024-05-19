@@ -2,6 +2,8 @@ package com.moviehub.mhback.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "COMMENTS")
 public class Comment {
@@ -17,6 +19,7 @@ public class Comment {
 
     private String type;
     private String comment;
+    private LocalDateTime datetime;
 
     public long getId() {
         return id;
@@ -56,5 +59,13 @@ public class Comment {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public LocalDateTime getDatetime() {
+        return datetime;
+    }
+
+    public void setDatetime(LocalDateTime datetime) {
+        this.datetime = datetime;
     }
 }
