@@ -19,8 +19,13 @@ public class TotalLikesController {
         return totalLikesRepository.getMostLikedMovies();
     }
 
-    @PostMapping
-    public TotalLikes addTotalLikes(@RequestBody TotalLikes totalLikes) {
+    @GetMapping("/{type}/{movieId}")
+    public TotalLikes getTotalLikesByMovieId(@PathVariable String type, @PathVariable long movieId) {
+        return totalLikesRepository.findTotalLikesByMovieId(type, movieId);
+    }
+
+    @PostMapping("/update")
+    public TotalLikes updateTotalLikes(@RequestBody TotalLikes totalLikes) {
         return totalLikesRepository.save(totalLikes);
     }
 }
