@@ -3,15 +3,12 @@
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/entities/Comment.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/controllers/CommentController.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/entities/List.java
-/Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/repositories/TotalLikesRepository.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/entities/Like.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/controllers/ListController.java
-/Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/entities/TotalLikes.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/entities/ItemList.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/repositories/ListRepository.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/repositories/LikeRepository.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/controllers/LikeController.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/controllers/ItemListController.java
-/Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/controllers/TotalLikesController.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/config/DataRestConfig.java
 /Users/sps/Desarrollo/moviehub-back/src/main/java/com/moviehub/mhback/MhBackApplication.java
