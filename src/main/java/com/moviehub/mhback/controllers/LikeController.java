@@ -39,4 +39,9 @@ public class LikeController {
     public void deleteLike(@PathVariable long likeId) {
         likeRepository.deleteById(likeId);
     }
+
+    @GetMapping("top5")
+    public List<Object[]> getTop5LikedMovies() {
+        return likeRepository.getTop5LikedMovies(PageRequest.of(0, 5));
+    }
 }
